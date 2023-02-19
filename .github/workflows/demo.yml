@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code # test 1234
+      - name: Get code # test 123456
         uses: actions/checkout@v3
 
       - name: Cache dependencies
