@@ -10,14 +10,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code # test
+      - name: Get code # test 123
         uses: actions/checkout@v3
 
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }} # if occurs any changes in package-lock.json, the cache will be invalidated
       - name: Install dependencies
         run: npm ci
       - name: Lint code
