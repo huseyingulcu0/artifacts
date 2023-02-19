@@ -19,7 +19,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }} # if occurs any changes in package-lock.json, the cache will be invalidated
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Lint code
         run: npm run lint
       - name: Test code
@@ -38,7 +38,7 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build website
         run: npm run build
       - name: Publish js file name
